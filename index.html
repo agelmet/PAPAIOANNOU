@@ -14,17 +14,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --garnet:#6e1322;
-  --garnet-deep:#4a0c17;
-  --rose:#b06a5e;
-  --terra:#c08572;
-  --plaster:#f4efe8;
-  --plaster-warm:#efe7da;
-  --ink:#231b1a;
-  --ink-soft:#5a4d49;
-  --honey:#caa178;
-  --line:rgba(35,27,26,.12);
-  --paper:#fbf8f3;
+  /* --- ΜΙΝΙΜΑΛ ΓΗΙΝΗ ΠΑΛΕΤΑ --- */
+  --garnet: #827366;       /* Απαλό ζεστό καφέ / Taupe */
+  --garnet-deep: #5c5047;  /* Σκούρο καφέ της γης */
+  --rose: #b8ac9f;         /* Σπασμένο μπεζ / Sand */
+  --terra: #a69c8e;        /* Απαλό λαδί / Stone */
+  --plaster: #f4efe8;      /* Υπόλευκο */
+  --plaster-warm: #efe7da; /* Θερμό υπόλευκο */
+  --ink: #36312d;          /* Πολύ σκούρο γκρι-καφέ αντί για μαύρο */
+  --ink-soft: #6b635c;     /* Μεσαίο γκρι-καφέ */
+  --honey: #c4ad93;        
+  --line: rgba(54, 49, 45, .12);
+  --paper: #fbf9f6;
 
   --ff-display:"Fraunces",Georgia,serif;
   --ff-body:"Inter",system-ui,sans-serif;
@@ -90,7 +91,7 @@ header{
   transition:background .5s var(--ease),box-shadow .5s var(--ease),padding .5s var(--ease);
 }
 header.scrolled{
-  background:rgba(251,248,243,.86);
+  background:rgba(251,249,246,.86);
   backdrop-filter:blur(14px);
   -webkit-backdrop-filter:blur(14px);
   box-shadow:0 1px 0 var(--line);
@@ -165,14 +166,14 @@ header.scrolled .hamburger span{background:var(--ink)}
 .hero-bg{
   position:absolute;inset:0;
   background:url("https://raw.githubusercontent.com/agelmet/PAPAIOANNOU/a7794dd9dcada0ab727a7b8bc099424a81a2e6b3/pap2.jpg") center/cover no-repeat;
-  opacity:.22;filter:saturate(.7);
+  opacity:.3;filter:saturate(.7);
   transform:scale(1.08);
   animation:heroZoom 18s ease-in-out infinite alternate;
 }
 @keyframes heroZoom{to{transform:scale(1.16)}}
 .hero::before{
   content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(74,12,23,.55) 0%,rgba(74,12,23,.3) 40%,rgba(74,12,23,.9) 100%);
+  background:linear-gradient(180deg,rgba(92,80,71,.55) 0%,rgba(92,80,71,.3) 40%,rgba(92,80,71,.9) 100%);
 }
 .hero-grain{
   position:absolute;inset:0;opacity:.5;mix-blend-mode:overlay;pointer-events:none;
@@ -279,7 +280,7 @@ header.scrolled .hamburger span{background:var(--ink)}
 .about-figure .credline{
   position:absolute;right:-14px;bottom:34px;background:var(--garnet);color:var(--plaster);
   font-family:var(--ff-display);font-style:italic;font-size:.95rem;padding:.7rem 1.2rem;border-radius:2px;
-  max-width:200px;line-height:1.3;box-shadow:0 12px 30px rgba(74,12,23,.25);
+  max-width:200px;line-height:1.3;box-shadow:0 12px 30px rgba(92,80,71,.25);
 }
 .about-body h2{font-size:clamp(1.8rem,4vw,3rem);font-weight:300;margin:1.2rem 0 1.6rem}
 .about-body h2 em{font-style:italic;color:var(--garnet)}
@@ -330,7 +331,7 @@ header.scrolled .hamburger span{background:var(--ink)}
 .rm-aside{position:sticky;top:120px}
 .rm-aside-fig{position:relative;border-radius:2px;overflow:hidden}
 .rm-aside-fig img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:saturate(.85) brightness(.92)}
-.rm-aside-fig::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(74,12,23,.1),rgba(74,12,23,.55))}
+.rm-aside-fig::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(92,80,71,.1),rgba(92,80,71,.55))}
 .rm-aside-quote{font-family:var(--ff-display);font-style:italic;font-weight:300;font-size:clamp(1.1rem,2vw,1.45rem);line-height:1.4;color:var(--plaster);margin-top:1.8rem;padding-left:1.2rem;border-left:1px solid var(--terra)}
 @media(max-width:900px){.rm-layout{grid-template-columns:1fr}.rm-aside{position:static;display:none}}
 .rm-track{position:relative;padding-left:clamp(1.5rem,4vw,3rem)}
@@ -353,7 +354,7 @@ header.scrolled .hamburger span{background:var(--ink)}
   border:1px solid var(--line);
 }
 .philo-card::before{content:"";position:absolute;left:0;top:0;width:100%;height:2px;background:var(--garnet);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
-.philo-card:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(74,12,23,.1)}
+.philo-card:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(92,80,71,.1)}
 .philo-card:hover::before{transform:scaleX(1)}
 .philo-card .pc-icon{width:46px;height:46px;margin-bottom:1.4rem;color:var(--garnet)}
 .philo-card h3{font-size:1.3rem;font-weight:400;margin-bottom:.8rem}
@@ -362,29 +363,32 @@ header.scrolled .hamburger span{background:var(--ink)}
 /* ---------- ARTICLES ---------- */
 .articles{background:var(--paper)}
 .art-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:clamp(2rem,5vw,4rem);margin-top:clamp(2.5rem,5vw,4rem);align-items:start}
+
 .art-feature{
   background:var(--garnet-deep);color:var(--plaster);border-radius:2px;overflow:hidden;
   display:flex;flex-direction:column;
+  border: 1px solid var(--line);
 }
 .art-feature .af-top{padding:clamp(2rem,4vw,3rem) clamp(2rem,4vw,3rem) 0}
 .art-tag{font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--terra);display:inline-flex;gap:.7rem;align-items:center;margin-bottom:1.4rem}
-.art-feature h3{font-size:clamp(1.5rem,3.2vw,2.3rem);font-weight:300;line-height:1.12;margin-bottom:1rem}
+.art-feature h3{font-size:clamp(1.5rem,3.2vw,2.3rem);font-weight:300;line-height:1.12;margin-bottom:1rem; transition: color 0.3s ease;}
 .art-feature .af-meta{font-size:.82rem;color:rgba(244,239,232,.6);margin-bottom:1.4rem}
 .art-feature p{color:rgba(244,239,232,.78);font-weight:300;font-size:.98rem}
-.art-excerpt{position:relative;max-height:9.5em;overflow:hidden;transition:max-height .8s var(--ease)}
-.art-excerpt.expanded{max-height:200em}
-.art-excerpt::after{content:"";position:absolute;bottom:0;left:0;width:100%;height:4em;background:linear-gradient(transparent,var(--garnet-deep));transition:opacity .4s var(--ease)}
-.art-excerpt.expanded::after{opacity:0}
-.art-excerpt p{margin-bottom:1rem}
 .af-foot{padding:1.6rem clamp(2rem,4vw,3rem) clamp(2rem,4vw,3rem)}
 .art-readmore{display:inline-flex;align-items:center;gap:.6rem;font-size:.8rem;letter-spacing:.06em;color:var(--terra);font-weight:500;transition:gap .3s var(--ease)}
-.art-readmore:hover{gap:1rem}
+.art-feature:hover .art-readmore{gap:1rem}
 .art-side{display:flex;flex-direction:column;gap:1.2rem}
 .art-note{background:var(--plaster);border:1px solid var(--line);padding:clamp(1.6rem,3vw,2.2rem);border-radius:2px}
 .art-note .an-sym{font-family:var(--ff-display);font-size:2rem;color:var(--rose);line-height:1;margin-bottom:.8rem}
 .art-note h4{font-family:var(--ff-display);font-size:1.2rem;font-weight:400;margin-bottom:.6rem}
 .art-note p{color:var(--ink-soft);font-size:.9rem;font-weight:300}
 .art-soon{background:var(--plaster-warm);border:1px dashed var(--rose);padding:clamp(1.6rem,3vw,2.2rem);border-radius:2px;text-align:center;color:var(--ink-soft);font-size:.9rem;font-weight:300}
+
+/* Δυναμικό Άρθρο (Άνοιγμα) */
+#single-content p { margin-bottom: 1.2rem; }
+#single-content img { max-width: 100%; border-radius: 4px; margin: 2rem 0; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+#single-content a { color: var(--terra); text-decoration: underline; }
+#single-content a:hover { color: var(--garnet); }
 
 /* ---------- FAQ ---------- */
 .faq{background:var(--plaster)}
@@ -461,10 +465,8 @@ footer{background:var(--ink);color:rgba(244,239,232,.7);padding:clamp(3rem,6vw,4
 </head>
 <body>
 
-<!-- LOADER -->
 <div id="loader" aria-hidden="true"><div class="loader-psi">ψ</div></div>
 
-<!-- NAV -->
 <header id="header">
   <a href="#top" class="brand" aria-label="Δέσποινα Παπαϊωάννου — Αρχική">
     <span class="brand-mark">ψ</span>
@@ -491,7 +493,6 @@ footer{background:var(--ink);color:rgba(244,239,232,.7);padding:clamp(3rem,6vw,4
   <a href="#contact">Επικοινωνία</a>
 </div>
 
-<!-- HERO -->
 <section class="hero" id="top">
   <div class="hero-bg" role="img" aria-label="Ο χώρος της θεραπείας"></div>
   <div class="hero-grain"></div>
@@ -516,7 +517,6 @@ footer{background:var(--ink);color:rgba(244,239,232,.7);padding:clamp(3rem,6vw,4
   <div class="scroll-cue"><span>Κυλήστε</span><span class="dot"></span></div>
 </section>
 
-<!-- MARQUEE -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
     <span>Ατομική Ψυχοθεραπεία</span><span>Ομαδική Ανάλυση</span><span>Θεραπεία Ζεύγους</span><span>Συμβουλευτική Γονέων</span><span>Online Συνεδρίες</span><span>Προσωπική Ανάπτυξη</span>
@@ -524,7 +524,6 @@ footer{background:var(--ink);color:rgba(244,239,232,.7);padding:clamp(3rem,6vw,4
   </div>
 </div>
 
-<!-- ABOUT -->
 <section class="section about" id="about">
   <div class="wrap">
     <div class="about-grid">
@@ -534,15 +533,15 @@ footer{background:var(--ink);color:rgba(244,239,232,.7);padding:clamp(3rem,6vw,4
       </figure>
       <div class="about-body reveal d1">
         <span class="eyebrow">Το προφίλ μου</span>
-        <h2>Κλινική &amp; Αναπτυξιακή Ψυχολόγος, <em>Ομαδική Αναλύτρια</em> και Ψυχοδυναμική Ψυχοθεραπεύτρια.</h2>
+        <h2>Κλινική & Αναπτυξιακή Ψυχολόγος, <em>Ομαδική Αναλύτρια</em> και Ψυχοδυναμική Ψυχοθεραπεύτρια.</h2>
         <p>Σπούδασα Ψυχολογία στο Κρατικό Πανεπιστήμιο Gabriele D'Annunzio στην Ιταλία, όπου ολοκλήρωσα και το μεταπτυχιακό μου στην Κλινική Ψυχολογία και Ψυχολογία της Υγείας, με άδεια ασκήσεως επαγγέλματος. Πραγματοποίησα την πρακτική μου άσκηση στην S.M.I.A.B. (Italian Medical Society of Self-Bioenergetic Analysis) με έδρα τη Ρώμη, με ιδιαίτερη εστίαση στη θεραπεία στην ιταλική γλώσσα.</p>
         <p>Κατέχω δεύτερο μεταπτυχιακό στην Αναπτυξιακή Ψυχολογία και είμαι εκπαιδευόμενο μέλος της Ελληνικής Εταιρίας Αναλυτικής Ομαδικής και Οικογενειακής Ψυχοθεραπείας. Έχω παρακολουθήσει εξειδικευμένα προγράμματα και σεμινάρια στην ψυχοπαθολογία παιδιού, εφήβου και ενήλικου, την ψυχοσωματική, την ψυχανάλυση, καθώς και τη γνωσιακή-συμπεριφορική (CBT) θεραπεία.</p>
         <p>Παράλληλα έχω προσφέρει εθελοντικά και έχω συνεργαστεί με διάφορους φορείς, ενώ είμαι επιστημονική συνεργάτις της εταιρίας Αέρτον.</p>
         <div class="creds">
-          <span>Κλινική Ψυχολογία &amp; Ψυχολογία Υγείας — MSc</span>
+          <span>Κλινική Ψυχολογία & Ψυχολογία Υγείας — MSc</span>
           <span>Αναπτυξιακή Ψυχολογία — MSc</span>
           <span>Ομαδική Ανάλυση</span>
-          <span>Ψυχοσωματική &amp; Ψυχανάλυση</span>
+          <span>Ψυχοσωματική & Ψυχανάλυση</span>
           <span>CBT</span>
         </div>
       </div>
@@ -551,7 +550,6 @@ footer{background:var(--ink);color:rgba(244,239,232,.7);padding:clamp(3rem,6vw,4
   </div>
 </section>
 
-<!-- SERVICES -->
 <section class="section services" id="services">
   <div class="wrap">
     <div class="services-head">
@@ -571,22 +569,21 @@ footer{background:var(--ink);color:rgba(244,239,232,.7);padding:clamp(3rem,6vw,4
         <div class="acc-body"><div class="acc-body-inner">Μια εις βάθος προσέγγιση που αναζητά το νόημα πίσω από το σύμπτωμα. Φωτίζοντας όσα παραμένουν άρρητα, δίνουμε στον εσωτερικό κόσμο τη δυνατότητα να εκφραστεί και να μεταμορφωθεί.</div></div>
       </div>
       <div class="acc-item reveal">
-        <button class="acc-head" aria-expanded="false"><span class="acc-num">03</span><span class="acc-title">Ομαδική Ανάλυση &amp; Θεραπευτικές Ομάδες</span><span class="acc-icon" aria-hidden="true"></span></button>
+        <button class="acc-head" aria-expanded="false"><span class="acc-num">03</span><span class="acc-title">Ομαδική Ανάλυση & Θεραπευτικές Ομάδες</span><span class="acc-icon" aria-hidden="true"></span></button>
         <div class="acc-body"><div class="acc-body-inner">Η ομάδα ως καθρέφτης και ως πεδίο σχέσης. Μέσα από την αναλυτική ομαδική διαδικασία, αναγνωρίζουμε επαναλαμβανόμενα μοτίβα και δοκιμάζουμε νέους τρόπους να συνυπάρχουμε με τους άλλους.</div></div>
       </div>
       <div class="acc-item reveal">
-        <button class="acc-head" aria-expanded="false"><span class="acc-num">04</span><span class="acc-title">Θεραπεία Ζεύγους &amp; Συμβουλευτική Γονέων</span><span class="acc-icon" aria-hidden="true"></span></button>
+        <button class="acc-head" aria-expanded="false"><span class="acc-num">04</span><span class="acc-title">Θεραπεία Ζεύγους & Συμβουλευτική Γονέων</span><span class="acc-icon" aria-hidden="true"></span></button>
         <div class="acc-body"><div class="acc-body-inner">Υποστήριξη για ζευγάρια που αναζητούν εκ νέου την επικοινωνία τους, καθώς και συμβουλευτική γονέων για τη διαχείριση δυσκολιών στη σχέση με τα παιδιά και τη στήριξη της οικογενειακής ισορροπίας.</div></div>
       </div>
       <div class="acc-item reveal">
-        <button class="acc-head" aria-expanded="false"><span class="acc-num">05</span><span class="acc-title">Δια ζώσης &amp; Online Συνεδρίες</span><span class="acc-icon" aria-hidden="true"></span></button>
+        <button class="acc-head" aria-expanded="false"><span class="acc-num">05</span><span class="acc-title">Δια ζώσης & Online Συνεδρίες</span><span class="acc-icon" aria-hidden="true"></span></button>
         <div class="acc-body"><div class="acc-body-inner">Συνεδρίες στο γραφείο στην Αθήνα ή εξ αποστάσεως, με την ίδια ποιότητα παρουσίας και προσοχής. Διαθεσιμότητα κατόπιν ραντεβού, ώστε η θεραπεία να εντάσσεται αρμονικά στην καθημερινότητά σας.</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ROADMAP -->
 <section class="section roadmap" id="roadmap">
   <div class="wrap">
     <span class="eyebrow reveal">Η θεραπευτική διαδρομή</span>
@@ -596,10 +593,10 @@ footer{background:var(--ink);color:rgba(244,239,232,.7);padding:clamp(3rem,6vw,4
     <div class="rm-track">
       <div class="rm-line"><div class="rm-line-fill" id="rmFill"></div></div>
       <div class="rm-step reveal"><span class="rm-dot"></span><span class="rm-stage">Βήμα 01</span><h3>Πρώτη επικοινωνία</h3><p>Ένα σύντομο τηλεφώνημα ή μήνυμα. Μιλάμε για το τι σας φέρνει εδώ και κανονίζουμε την πρώτη μας συνάντηση — χωρίς δέσμευση, χωρίς πίεση.</p></div>
-      <div class="rm-step reveal"><span class="rm-dot"></span><span class="rm-stage">Βήμα 02</span><h3>Γνωριμία &amp; αξιολόγηση</h3><p>Στις πρώτες συνεδρίες γνωριζόμαστε. Αποτυπώνουμε μαζί την εικόνα του παρόντος, την ιστορία σας και αυτό που θα θέλατε να αλλάξει.</p></div>
+      <div class="rm-step reveal"><span class="rm-dot"></span><span class="rm-stage">Βήμα 02</span><h3>Γνωριμία & αξιολόγηση</h3><p>Στις πρώτες συνεδρίες γνωριζόμαστε. Αποτυπώνουμε μαζί την εικόνα του παρόντος, την ιστορία σας και αυτό που θα θέλατε να αλλάξει.</p></div>
       <div class="rm-step reveal"><span class="rm-dot"></span><span class="rm-stage">Βήμα 03</span><h3>Κοινός σχεδιασμός</h3><p>Ορίζουμε από κοινού τους στόχους και το πλαίσιο της θεραπείας — ατομικό, ομαδικό ή συνδυαστικό — με ρυθμό που σας ταιριάζει.</p></div>
       <div class="rm-step reveal"><span class="rm-dot"></span><span class="rm-stage">Βήμα 04</span><h3>Η θεραπευτική εργασία</h3><p>Το κύριο μέρος της διαδρομής. Σε ένα ασφαλές πλαίσιο, ο λόγος βρίσκει χώρο, τα μοτίβα γίνονται ορατά και ανοίγουν νέοι δρόμοι.</p></div>
-      <div class="rm-step reveal"><span class="rm-dot"></span><span class="rm-stage">Βήμα 05</span><h3>Εδραίωση &amp; αυτονομία</h3><p>Όσα κατακτήθηκαν γίνονται δικά σας. Κλείνουμε τον κύκλο όταν νιώθετε έτοιμοι — με νέα εργαλεία και μεγαλύτερη εμπιστοσύνη στον εαυτό σας.</p></div>
+      <div class="rm-step reveal"><span class="rm-dot"></span><span class="rm-stage">Βήμα 05</span><h3>Εδραίωση & αυτονομία</h3><p>Όσα κατακτήθηκαν γίνονται δικά σας. Κλείνουμε τον κύκλο όταν νιώθετε έτοιμοι — με νέα εργαλεία και μεγαλύτερη εμπιστοσύνη στον εαυτό σας.</p></div>
     </div>
     <aside class="rm-aside reveal d2">
       <figure class="rm-aside-fig">
@@ -611,7 +608,6 @@ footer{background:var(--ink);color:rgba(244,239,232,.7);padding:clamp(3rem,6vw,4
   </div>
 </section>
 
-<!-- PHILOSOPHY -->
 <section class="section philo" id="philosophy">
   <div class="wrap">
     <span class="eyebrow reveal">Η φιλοσοφία μου</span>
@@ -619,7 +615,7 @@ footer{background:var(--ink);color:rgba(244,239,232,.7);padding:clamp(3rem,6vw,4
     <div class="philo-grid">
       <div class="philo-card reveal">
         <svg class="pc-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M24 6c-7 6-14 6-16 6 0 14 6 24 16 30 10-6 16-16 16-30-2 0-9 0-16-6z"/></svg>
-        <h3>Ασφάλεια &amp; σεβασμός</h3>
+        <h3>Ασφάλεια & σεβασμός</h3>
         <p>Κάθε συνάντηση πατά σε ένα θεμέλιο εμπιστοσύνης, εχεμύθειας και απόλυτου σεβασμού στη μοναδικότητα του κάθε ανθρώπου.</p>
       </div>
       <div class="philo-card reveal d1">
@@ -651,43 +647,45 @@ footer{background:var(--ink);color:rgba(244,239,232,.7);padding:clamp(3rem,6vw,4
   </div>
 </section>
 
-<!-- ARTICLES -->
 <section class="section articles" id="articles">
   <div class="wrap">
-    <span class="eyebrow reveal">Σκέψεις &amp; κείμενα</span>
-    <h2 class="sec-title reveal d1">Άρθρα <em>&amp; μεταφράσεις.</em></h2>
-    <div class="art-grid">
-      <article class="art-feature reveal">
-        <div class="af-top">
-          <span class="art-tag">Μετάφραση · HuffPost Italia</span>
-          <h3>Η ψυχική δυσφορία στη σύγχρονη εποχή</h3>
-          <p class="af-meta">Σαράντης Θανόπουλος · 21 Μαΐου 2026 · Μετάφραση από τα ιταλικά και ελληνική απόδοση: Δέσποινα Παπαϊωάννου</p>
-          <div class="art-excerpt" id="artExcerpt">
-            <p>Ένα ψυχικό άδειασμα αφαιρεί μαζί με τα συναισθήματα και την οδύνη που θα έπρεπε να προκαλεί η απουσία τους. Δρα ως προληπτική αναισθησία, σαν μια έκλειψη του Εαυτού που καθιστά το υποκείμενο απρόσιτο στη ματαίωση και την απώλεια.</p>
-            <p>Εδώ και καιρό τίθενται ερωτήματα σχετικά με τις νέες μορφές ψυχικής δυσφορίας στη σύγχρονη εποχή. Στην πραγματικότητα, η ανθρώπινη οδύνη στις διάφορες εκφάνσεις της έμεινε ουσιαστικά αναλλοίωτη, πέρα από την προφανή συσχέτιση με τον τρόπο ανάγνωσης και διάγνωσής της. Το πραγματικά νέο και ευρέως διαδεδομένο φαινόμενο είναι η αποσύνθεση της οδύνης που καθιστά τη δυσφορία άφωνη, άοσμη, αόρατη.</p>
-            <p>Η άρνηση του πόνου αποτελεί ένα γενικευμένο φαινόμενο. Η ψυχική ευημερία ταυτίζεται με την απουσία εντάσεων και η απόλαυση με την ανακούφιση. Η εποχή μας απέχει πολύ από την αντίληψη του πάσχειν ως γνώσης της ζωής. Ο πόνος μας αποσταθεροποιεί, αλλά είναι επίσης το πιο αξιόπιστο μέτρο της αξίας των πραγμάτων που αγαπάμε.</p>
-            <p>Η ώθηση να εξαλείψει κανείς τον ψυχικό πόνο είναι απολύτως συνεπής με μια επισφαλή και ασταθή κοινωνία που αποθαρρύνει την επεξεργασία της οδύνης ως εργαλείου ανάπτυξης. Αυτό του οποίου γινόμαστε σήμερα μάρτυρες πηγαίνει πιο πέρα: ένα ψυχικό άδειασμα εξαλείφει μαζί με τα συναισθήματα και την οδύνη που η απουσία τους θα έπρεπε να προκαλεί.</p>
-          </div>
+    <span class="eyebrow reveal">Σκέψεις & κείμενα</span>
+    <h2 class="sec-title reveal d1">Άρθρα <em>& μεταφράσεις.</em></h2>
+
+    <div id="articles-list-view" class="reveal d1">
+      <div class="art-grid">
+        <div id="articles-container" style="display: flex; flex-direction: column; gap: 1.5rem;">
+          <p style="color:var(--ink-soft);">Φόρτωση άρθρων...</p>
         </div>
-        <div class="af-foot">
-          <button class="art-readmore" id="artToggle" aria-expanded="false">Διαβάστε περισσότερα
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
+        <aside class="art-side">
+          <div class="art-note reveal d1">
+            <div class="an-sym">ψ</div>
+            <h4>Γιατί γράφω & μεταφράζω</h4>
+            <p>Η μετάφραση κειμένων ψυχαναλυτικού στοχασμού είναι για μένα μια πράξη φροντίδας: να φέρνω στην ελληνική γλώσσα φωνές που φωτίζουν τη σχέση μας με τον πόνο, την επιθυμία και το νόημα.</p>
+          </div>
+          <div class="art-soon reveal d2">Περισσότερα κείμενα και μεταφράσεις προστίθενται σύντομα.</div>
+        </aside>
+      </div>
+    </div>
+
+    <div id="article-single-view" style="display: none;" class="reveal d1">
+      <button onclick="showArticlesList()" class="btn btn-ghost" style="color:var(--ink-soft); border-color:var(--line); margin-bottom: 2rem;">
+        ← Επιστροφή στα άρθρα
+      </button>
+      
+      <article class="art-feature" style="background:var(--paper); color:var(--ink); border: 1px solid var(--line);">
+        <div class="af-top" style="padding-bottom: 3rem;">
+          <span class="art-tag" id="single-date" style="color:var(--terra);"></span>
+          <h3 id="single-title" style="color:var(--garnet-deep); margin-top:0.5rem; margin-bottom:1.5rem; font-size:clamp(1.8rem, 4vw, 2.8rem);"></h3>
+          <div id="single-content" style="color:var(--ink-soft); font-weight:300; font-size:1.05rem; line-height:1.7;">
+            </div>
         </div>
       </article>
-      <aside class="art-side">
-        <div class="art-note reveal d1">
-          <div class="an-sym">ψ</div>
-          <h4>Γιατί γράφω &amp; μεταφράζω</h4>
-          <p>Η μετάφραση κειμένων ψυχαναλυτικού στοχασμού είναι για μένα μια πράξη φροντίδας: να φέρνω στην ελληνική γλώσσα φωνές που φωτίζουν τη σχέση μας με τον πόνο, την επιθυμία και το νόημα.</p>
-        </div>
-        <div class="art-soon reveal d2">Περισσότερα κείμενα και μεταφράσεις προστίθενται σύντομα.</div>
-      </aside>
     </div>
+
   </div>
 </section>
 
-<!-- FAQ -->
 <section class="section faq" id="faq">
   <div class="wrap">
     <span class="eyebrow reveal">Συχνές ερωτήσεις</span>
@@ -703,7 +701,6 @@ footer{background:var(--ink);color:rgba(244,239,232,.7);padding:clamp(3rem,6vw,4
   </div>
 </section>
 
-<!-- CONTACT -->
 <section class="section contact" id="contact">
   <div class="wrap">
     <div class="contact-grid">
@@ -747,7 +744,6 @@ footer{background:var(--ink);color:rgba(244,239,232,.7);padding:clamp(3rem,6vw,4
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="foot-top">
     <a href="#top" class="foot-brand">
@@ -764,10 +760,12 @@ footer{background:var(--ink);color:rgba(244,239,232,.7);padding:clamp(3rem,6vw,4
     </nav>
   </div>
   <div class="foot-bottom">
-    <span>© <span id="year"></span> Δέσποινα Παπαϊωάννου · Κλινική &amp; Αναπτυξιακή Ψυχολόγος. Με επιφύλαξη παντός δικαιώματος.</span>
+    <span>© <span id="year"></span> Δέσποινα Παπαϊωάννου · Κλινική & Αναπτυξιακή Ψυχολόγος. Με επιφύλαξη παντός δικαιώματος.</span>
     <span>Designed by <a href="https://www.advonmedia.com" target="_blank" rel="noopener">Advon Media</a></span>
   </div>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
 
 <script>
 (function(){
@@ -840,18 +838,6 @@ footer{background:var(--ink);color:rgba(244,239,232,.7);padding:clamp(3rem,6vw,4
     });
   });
 
-  // Article expand
-  var artToggle=document.getElementById("artToggle");
-  var artExcerpt=document.getElementById("artExcerpt");
-  if(artToggle){
-    artToggle.addEventListener("click",function(){
-      var exp=artExcerpt.classList.toggle("expanded");
-      artToggle.setAttribute("aria-expanded",exp?"true":"false");
-      artToggle.childNodes[0].nodeValue=exp?"Σύμπτυξη ":"Διαβάστε περισσότερα ";
-      artToggle.querySelector("svg").style.transform=exp?"rotate(180deg)":"";
-    });
-  }
-
   // Roadmap line fill
   var rmFill=document.getElementById("rmFill");
   if(rmFill){
@@ -865,6 +851,125 @@ footer{background:var(--ink);color:rgba(244,239,232,.7);padding:clamp(3rem,6vw,4
 
   // Year
   document.getElementById("year").textContent=new Date().getFullYear();
+
+  // --- CONTENTFUL LOGIC ---
+  const client = contentful.createClient({
+      space: 'j7nlf9q2fu2e', 
+      accessToken: 'tCpfLEFdGvK0HNs1LebpJMW2y58JWK_Vmdjtopm1LVk',
+      environment: 'master'
+  });
+
+  let allArticles = []; 
+
+  function formatDate(dateString) {
+      return new Date(dateString).toLocaleDateString('el-GR', { year: 'numeric', month: 'long', day: 'numeric' });
+  }
+
+  function renderNode(node) {
+      if (!node) return '';
+
+      if (node.nodeType === 'text') {
+          let html = node.value;
+          if (node.marks) {
+              node.marks.forEach(mark => {
+                  if (mark.type === 'bold') html = `<strong>${html}</strong>`;
+                  if (mark.type === 'italic') html = `<em>${html}</em>`;
+                  if (mark.type === 'underline') html = `<u>${html}</u>`;
+              });
+          }
+          return html;
+      }
+
+      const contentHtml = node.content ? node.content.map(renderNode).join('') : '';
+
+      switch (node.nodeType) {
+          case 'paragraph': return `<p>${contentHtml}</p>`;
+          case 'heading-1': return `<h1>${contentHtml}</h1>`;
+          case 'heading-2': return `<h2>${contentHtml}</h2>`;
+          case 'heading-3': return `<h3>${contentHtml}</h3>`;
+          case 'hyperlink': return `<a href="${node.data.uri}" target="_blank">${contentHtml}</a>`;
+          case 'embedded-asset-block':
+              const target = node.data.target;
+              if (target && target.fields && target.fields.file) {
+                  const url = target.fields.file.url;
+                  const title = target.fields.title || 'Εικόνα άρθρου';
+                  const finalUrl = url.startsWith('//') ? 'https:' + url : url;
+                  return `<img src="${finalUrl}" alt="${title}">`;
+              }
+              return '';
+          case 'document': return contentHtml;
+          default: return contentHtml;
+      }
+  }
+
+  // ΛΗΨΗ ΔΕΔΟΜΕΝΩΝ 
+  client.getEntries({ order: '-sys.createdAt' })
+      .then((response) => {
+          allArticles = response.items;
+          const container = document.getElementById('articles-container');
+          
+          if (allArticles.length === 0) {
+              container.innerHTML = "<p>Δεν βρέθηκαν άρθρα. Θυμηθείτε να πατήσετε Publish!</p>";
+              return;
+          }
+
+          container.innerHTML = ""; 
+
+          allArticles.forEach((entry, index) => {
+              const title = entry.fields.title || "Χωρίς Τίτλο";
+              const date = formatDate(entry.sys.createdAt);
+
+              container.innerHTML += `
+                  <article class="art-feature" style="cursor: pointer; transition: transform 0.3s ease; box-shadow: 0 4px 20px rgba(0,0,0,0.04);" onclick="openArticle(${index})" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+                      <div class="af-top" style="padding-bottom: 1.5rem;">
+                          <span class="art-tag">${date}</span>
+                          <h3 style="margin-bottom: 0;">${title}</h3>
+                      </div>
+                      <div class="af-foot" style="padding-top: 0;">
+                          <span class="art-readmore">Διαβάστε περισσότερα
+                              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                          </span>
+                      </div>
+                  </article>
+              `;
+          });
+      })
+      .catch((error) => {
+          console.error(error);
+          document.getElementById('articles-container').innerHTML = `
+              <p style="color:red;">
+                  Σφάλμα σύνδεσης με Contentful. (Error: ${error.message})
+              </p>`;
+      });
+
+  // --- ΣΥΝΑΡΤΗΣΕΙΣ ΕΝΑΛΛΑΓΗΣ ΣΕΛΙΔΩΝ ---
+  window.openArticle = function(index) {
+      const article = allArticles[index];
+      
+      document.getElementById('single-title').innerText = article.fields.title || "Χωρίς Τίτλο";
+      document.getElementById('single-date').innerText = formatDate(article.sys.createdAt);
+      
+      let bodyHtml = "";
+      if (article.fields.text && article.fields.text.nodeType === 'document') {
+          bodyHtml = renderNode(article.fields.text);
+      } else {
+          bodyHtml = `<p>${article.fields.text || ""}</p>`;
+      }
+      document.getElementById('single-content').innerHTML = bodyHtml;
+
+      document.getElementById('articles-list-view').style.display = 'none';
+      document.getElementById('article-single-view').style.display = 'block';
+      
+      // Κύλιση στο section των άρθρων
+      document.getElementById('articles').scrollIntoView({ behavior: 'smooth' });
+  };
+
+  window.showArticlesList = function() {
+      document.getElementById('article-single-view').style.display = 'none';
+      document.getElementById('articles-list-view').style.display = 'block';
+      document.getElementById('articles').scrollIntoView({ behavior: 'smooth' });
+  };
+
 })();
 </script>
 </body>
