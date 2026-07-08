@@ -9,6 +9,10 @@
 <meta property="og:description" content="Ένας χώρος όπου ο λόγος βρίσκει τη θέση του. Ψυχοδυναμική ψυχοθεραπεία & ομαδική ανάλυση στην Αθήνα.">
 <meta property="og:image" content="https://raw.githubusercontent.com/agelmet/PAPAIOANNOU/a7794dd9dcada0ab727a7b8bc099424a81a2e6b3/papai.jpg">
 <meta property="og:type" content="website">
+
+<meta name="google-site-verification" content="qnzx0CXGlEtiPqVrxKsGkTeiTtDqJa8JAw3zCV-o0Aw">
+<link rel="canonical" href="https://dpapaioannou-psychologist.gr/">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -504,7 +508,6 @@ footer{background:var(--ink);color:rgba(244,239,232,.7);padding:clamp(3rem,6vw,4
 </head>
 <body>
 
-<!-- LOADER -->
 <div id="loader" aria-hidden="true">
   <div class="loader-content">
     <div class="loader-psi">ψ</div>
@@ -512,7 +515,6 @@ footer{background:var(--ink);color:rgba(244,239,232,.7);padding:clamp(3rem,6vw,4
   </div>
 </div>
 
-<!-- NAV -->
 <header id="header">
   <a href="#top" class="brand" aria-label="Δέσποινα Παπαϊωάννου — Αρχική">
     <span class="brand-mark">ψ</span>
@@ -539,7 +541,6 @@ footer{background:var(--ink);color:rgba(244,239,232,.7);padding:clamp(3rem,6vw,4
   <a href="#contact">Επικοινωνία</a>
 </div>
 
-<!-- HERO -->
 <section class="hero" id="top">
   <div class="hero-bg" role="img" aria-label="Ο χώρος της θεραπείας"></div>
   <div class="hero-grain"></div>
@@ -564,7 +565,6 @@ footer{background:var(--ink);color:rgba(244,239,232,.7);padding:clamp(3rem,6vw,4
   <div class="scroll-cue"><span>Κυλήστε</span><span class="dot"></span></div>
 </section>
 
-<!-- MARQUEE -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
     <span>Ατομική Ψυχοθεραπεία</span><span>Ομαδική Ανάλυση</span><span>Θεραπεία Ζεύγους</span><span>Συμβουλευτική Γονέων</span><span>Online Συνεδρίες</span><span>Προσωπική Ανάπτυξη</span>
@@ -572,7 +572,6 @@ footer{background:var(--ink);color:rgba(244,239,232,.7);padding:clamp(3rem,6vw,4
   </div>
 </div>
 
-<!-- ABOUT -->
 <section class="section about" id="about">
   <div class="wrap">
     <div class="about-grid">
@@ -598,7 +597,6 @@ footer{background:var(--ink);color:rgba(244,239,232,.7);padding:clamp(3rem,6vw,4
   </div>
 </section>
 
-<!-- SERVICES -->
 <section class="section services" id="services">
   <div class="wrap">
     <div class="services-head">
@@ -633,7 +631,6 @@ footer{background:var(--ink);color:rgba(244,239,232,.7);padding:clamp(3rem,6vw,4
   </div>
 </section>
 
-<!-- ROADMAP -->
 <section class="section roadmap" id="roadmap">
   <div class="wrap">
     <span class="eyebrow reveal">Η θεραπευτική διαδρομή</span>
@@ -658,7 +655,6 @@ footer{background:var(--ink);color:rgba(244,239,232,.7);padding:clamp(3rem,6vw,4
   </div>
 </section>
 
-<!-- PHILOSOPHY -->
 <section class="section philo" id="philosophy">
   <div class="wrap">
     <span class="eyebrow reveal">Η φιλοσοφία μου</span>
@@ -698,21 +694,17 @@ footer{background:var(--ink);color:rgba(244,239,232,.7);padding:clamp(3rem,6vw,4
   </div>
 </section>
 
-<!-- SECTION: ARTICLES (CONTENTFUL) -->
 <section class="section blog" id="articles">
   <div class="wrap">
     
-    <!-- ΠΡΟΒΟΛΗ ΛΙΣΤΑΣ -->
     <div id="list-view" class="reveal">
       <h2 class="sec-title">Τα <em>άρθρα</em> μας.</h2>
       
-      <!-- Εδώ φορτώνει το Contentful (σε μορφή Grid για ωραία εμφάνιση) -->
       <div id="articles-container" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; margin-top: clamp(2.5rem,5vw,4rem);">
         <p style="color:var(--ink-soft); grid-column: 1 / -1; text-align: center;">Φόρτωση άρθρων...</p>
       </div>
     </div>
 
-    <!-- ΠΡΟΒΟΛΗ ΑΝΟΙΧΤΟΥ ΑΡΘΡΟΥ -->
     <div id="article-view">
       <button class="back-btn" onclick="showList()">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
@@ -722,14 +714,12 @@ footer{background:var(--ink);color:rgba(244,239,232,.7);padding:clamp(3rem,6vw,4
       <span class="date" id="single-date" style="color:var(--olive); font-size: 0.85em; font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; display: block; letter-spacing: 0.05em;"></span>
       <h2 id="single-title" style="color:var(--garnet-deep); margin-bottom: 30px; font-size: clamp(1.8rem, 4vw, 2.8rem);"></h2>
       <div id="single-content" class="article-content">
-        <!-- Το περιεχόμενο θα μπει εδώ από το Contentful -->
-      </div>
+        </div>
     </div>
 
   </div>
 </section>
 
-<!-- FAQ -->
 <section class="section faq" id="faq">
   <div class="wrap">
     <span class="eyebrow reveal">Συχνές ερωτήσεις</span>
@@ -739,14 +729,13 @@ footer{background:var(--ink);color:rgba(244,239,232,.7);padding:clamp(3rem,6vw,4
       <div class="faq-item reveal"><button class="faq-q" aria-expanded="false">Πώς κλείνω το πρώτο μου ραντεβού;<span class="chev" aria-hidden="true"></span></button><div class="faq-a"><p>Μπορείτε να επικοινωνήσετε τηλεφωνικά ή μέσω email. Θα μιλήσουμε σύντομα για το τι σας απασχολεί και θα κανονίσουμε την πρώτη μας συνάντηση. Οι συνεδρίες παρέχονται κατόπιν ραντεβού.</p></div></div>
       <div class="faq-item reveal"><button class="faq-q" aria-expanded="false">Προσφέρετε online συνεδρίες;<span class="chev" aria-hidden="true"></span></button><div class="faq-a"><p>Ναι. Οι συνεδρίες πραγματοποιούνται είτε δια ζώσης στο γραφείο στην Αθήνα, είτε διαδικτυακά, με την ίδια ποιότητα παρουσίας και προσοχής — όποια επιλογή σας εξυπηρετεί καλύτερα.</p></div></div>
       <div class="faq-item reveal"><button class="faq-q" aria-expanded="false">Σε ποιους απευθύνεστε;<span class="chev" aria-hidden="true"></span></button><div class="faq-a"><p>Σε ενήλικες και εφήβους που αντιμετωπίζουν δυσκολίες διάθεσης και άγχους, δυσλειτουργικές διαπροσωπικές ή οικογενειακές σχέσεις, ζητήματα διαχείρισης χρόνιων νοσημάτων, φοβίες, διαταραχές προσωπικότητας, καθώς και σε όσους επιθυμούν στήριξη στην προσωπική τους ανάπτυξη και τη διαχείριση κρίσεων.</p></div></div>
-      <div class="faq-item reveal"><button class="faq-q" aria-expanded="false">Ποια είναι η διαφορά της ομαδικής ανάλυσης;<span class="chev" aria-hidden="true"></span></button><div class="faq-a"><p>Στην ομαδική ανάλυση, η ομάδα λειτουργεί ως καθρέφτης των σχέσεών μας. Μέσα σε ένα ασφαλές πλαίσιο, αναγνωρίζουμε επαναλαμβανόμενα μοτίβα και δοκιμάζουμε νέους τρόπους να συνδεόμαστε με τους άλλους — μια εμπειρία που το ατομικό πλαίσιο δεν μπορεί πάντα να προσφέρει.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q" aria-expanded="false">Ποια είναι η διαφορά της ομαδικής ανάλυσης;<span class="chev" aria-hidden="true"></span></button><div class="faq-a"><p>Στην ομαδική ανάλυση, η ομάδα λειτουργεί ως καθρέφτης των σχέσεών μας. Μέσα σε ένα ασφαλές πλαίσιο, αναγνωρίζουμε επαναλαμβανόμενα μοτίβα και δοκιμάζουμε νέους τρόπους να συνδέομαστε με τους άλλους — μια εμπειρία που το ατομικό πλαίσιο δεν μπορεί πάντα να προσφέρει.</p></div></div>
       <div class="faq-item reveal"><button class="faq-q" aria-expanded="false">Πόσο διαρκεί μια θεραπεία;<span class="chev" aria-hidden="true"></span></button><div class="faq-a"><p>Δεν υπάρχει ενιαία απάντηση — κάθε διαδρομή είναι μοναδική. Τη διάρκεια και τους στόχους τους ορίζουμε από κοινού, με ρυθμό που σέβεται τη δική σας πορεία και ανάγκες.</p></div></div>
       <div class="faq-item reveal"><button class="faq-q" aria-expanded="false">Τηρείται η εμπιστευτικότητα;<span class="chev" aria-hidden="true"></span></button><div class="faq-a"><p>Απολύτως. Η εχεμύθεια αποτελεί θεμέλιο της θεραπευτικής σχέσης. Όσα μοιράζεστε στις συνεδρίες παραμένουν αυστηρά εμπιστευτικά, μέσα στο πλαίσιο της επαγγελματικής δεοντολογίας.</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section class="section contact" id="contact">
   <div class="wrap">
     <div class="contact-grid">
@@ -790,7 +779,6 @@ footer{background:var(--ink);color:rgba(244,239,232,.7);padding:clamp(3rem,6vw,4
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="foot-top">
     <a href="#top" class="foot-brand">
@@ -812,7 +800,6 @@ footer{background:var(--ink);color:rgba(244,239,232,.7);padding:clamp(3rem,6vw,4
   </div>
 </footer>
 
-<!-- CONTENTFUL SCRIPT IMPORT -->
 <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
 
 <script>
